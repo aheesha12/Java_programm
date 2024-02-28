@@ -1,0 +1,18 @@
+class GCD {
+    //creating the returnable function which calculate GCD of a number
+    static int find_GCD(int a,int b){
+        while(a!=b){
+            if(a>b){
+                a-=b;
+            }
+            else {
+                b-=a;
+            }
+        }
+        return b;
+    }
+    public static void main(String[] args) {
+        int a=40,b=25;//here diclare and initialize the variable
+        System.out.println(find_GCD(a,b));//inside the print calling a gcd function
+    }
+}
