@@ -1,0 +1,23 @@
+class GP {
+    //Claculate the power using recursion
+    static int power(int a,int n){
+        if(n==0)
+            return 1;
+        else{
+            return a*power(a,n-1);
+        }
+    }
+    //function for sum of geometric propagation
+    static int geometricSum(int a,int r,int n){
+        return (a*(power(r,n)-1)/(r-1));
+    }
+    static int geometricNthTerm(int a,int r,int n){
+        return (a*power(r,n-1));
+    }
+    public static void main(String[] arr){
+        
+        //give a value inside the call function (first value, comman ratio,Nth term)
+       System.out.println("last term value is "+geometricNthTerm(5,3,4));
+       System.out.println("Sum of series is "+geometricSum(5,3,4));
+    }
+}
